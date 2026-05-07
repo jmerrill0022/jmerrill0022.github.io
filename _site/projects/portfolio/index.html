@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio Website — Jacob's Portfolio</title>
+  <meta name="description" content="Software Engineer · Music Producer · San Diego" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Syne:wght@400;700&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+<body>
+
+  
+
+  <!-- MAIN SITE (hidden until intro completes) -->
+  <div id="site-content" >
+    <nav class="site-nav">
+  <a href="/" class="nav-logo">JL<span class="cursor-blink">_</span></a>
+  <ul class="nav-links">
+    <li><a href="/#about">about</a></li>
+    <li><a href="/#projects">projects</a></li>
+    <li><a href="/#music">music</a></li>
+    <li><a href="/#contact">contact</a></li>
+    <a href="/assets/resume.pdf" target="_blank" class="nav-cta">résumé</a>
+  </ul>
+  <button class="nav-toggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+    <main>
+      <section class="project-detail">
+  <div class="container">
+    <a href="/#projects" class="back-link">&larr; back to projects</a>
+    <h1>Portfolio Website</h1>
+    <div class="project-meta">
+      <span class="tag">Jekyll · JavaScript</span>
+      <span class="tag">Solo Developer</span>
+    </div>
+    <div class="project-body">
+      <h2 id="overview">Overview</h2>
+
+<p>This site. Built to stand out from the typical portfolio template — it opens with a fake terminal “system takeover” sequence personalized with the visitor’s name, blasts static noise, drops a “jk”, then loads the actual portfolio.</p>
+
+<h2 id="what-i-built">What I Built</h2>
+
+<ul>
+  <li>Jekyll static site generator with GitHub Pages hosting</li>
+  <li>Full JavaScript terminal intro sequence with frame-by-frame canvas static noise</li>
+  <li>Scroll-driven landing page with smooth section transitions</li>
+  <li>Responsive layout with Bootstrap grid and custom dark design system</li>
+</ul>
+
+<h2 id="tech-stack">Tech Stack</h2>
+
+<ul>
+  <li><strong>Jekyll</strong> — static site generator</li>
+  <li><strong>GitHub Pages</strong> — hosting</li>
+  <li><strong>Bootstrap</strong> — responsive grid</li>
+  <li><strong>Vanilla JavaScript + Canvas API</strong> — intro sequence</li>
+</ul>
+
+    </div>
+    
+    <a href="https://github.com/yourhandle/portfolio" class="btn" target="_blank">View on GitHub &rarr;</a>
+    
+    
+  </div>
+</section>
+
+    </main>
+    <footer class="site-footer">
+  <div class="container">
+    <div class="footer-left">
+      <span>Jacob Merrill &copy; 2026</span>
+    </div>
+    <div class="footer-links">
+    </div>
+  </div>
+</footer>
+
+  </div>
+
+  <script src="/assets/js/intro.js"></script>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>

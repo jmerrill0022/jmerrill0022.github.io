@@ -1,0 +1,37 @@
+title: Jacob's Portfolio
+description: Software Engineer · Music Producer · San Diego
+author: Jacob
+email: jacobdean805@gmail.com
+github_username: jmerrill0022
+linkedin_username: jacob-merrill-7348a9294
+
+baseurl: ""
+url: ""
+
+collections:
+  projects:
+    output: true
+    permalink: /projects/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: projects
+    values:
+      layout: project
+
+plugins:
+  - jekyll-feed
+
+markdown: kramdown
+highlighter: rouge
+
+sass:
+  sass_dir: _sass
+  style: compressed
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - README.md

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>{% if page.title %}{{ page.title }} — {% endif %}{{ site.title }}</title>
+  <meta name="description" content="{{ site.description }}" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Syne:wght@400;700&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}" />
+</head>
+<body>
+
+  {% if page.show_intro %}
+  <!-- TAKEOVER INTRO SEQUENCE -->
+  <div id="intro-overlay">
+    <canvas id="static-canvas"></canvas>
+
+    <div id="terminal-screen">
+      <div class="scanlines"></div>
+      <div class="terminal-inner">
+        <div id="boot-log"></div>
+        <div id="name-prompt" style="display:none;">
+          <label id="prompt-label">&gt; ENTER HOST NAME TO CONFIRM OVERRIDE:</label>
+          <input type="text" id="name-input" placeholder="your name..." maxlength="24" autocomplete="off" spellcheck="false" />
+        </div>
+        <div id="jk-log" style="display:none;"></div>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+  <!-- MAIN SITE (hidden until intro completes) -->
+  <div id="site-content" {% if page.show_intro %}style="display:none;"{% endif %}>
+    {% include nav.html %}
+    <main>
+      {{ content }}
+    </main>
+    {% include footer.html %}
+  </div>
+
+  <script src="{{ '/assets/js/intro.js' | relative_url }}"></script>
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>

@@ -1,0 +1,113 @@
+---
+layout: default
+title: Home
+show_intro: true
+---
+
+<!-- HERO / LANDING -->
+<section id="hero" class="hero-section">
+  <div class="container">
+    <div class="hero-eyebrow">San Diego, CA &mdash; Software Engineer</div>
+    <h1 class="hero-name">Jacob<br /><span class="hero-lastname">Merrill</span></h1>
+    <p class="hero-tagline">I build things at the intersection of software and music.</p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn">View Projects</a>
+      <a href="#contact" class="btn btn-outline">Get in Touch</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about-section">
+  <div class="container">
+    <h2 class="section-label">// about</h2>
+    <div class="about-grid">
+      <div class="about-bio">
+        <p>
+          I'm a CS student at [University] graduating in [year], with a Graphic Design minor and
+          nearly four years of professional black-box QA experience on Microsoft Defender.
+          I build things at the intersection of software and music — from vulnerability detection tools
+          to royalty dashboards for independent artists.
+        </p>
+        <p>
+          When I'm not at a computer, I'm in the studio or at the skate park.
+        </p>
+      </div>
+      <div class="about-skills">
+        <div class="skill-group">
+          <h3>Software</h3>
+          <ul>
+            <li>Python</li><li>C / C++</li><li>TypeScript</li>
+            <li>Next.js</li><li>SQL</li><li>Git</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>QA / Testing</h3>
+          <ul>
+            <li>Black-box testing</li>
+            <li>Test case design</li>
+            <li>Bug reporting</li>
+            <li>Defender-scale systems</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Design & Music</h3>
+          <ul>
+            <li>Graphic Design</li><li>UI/UX</li><li>Figma</li>
+            <li>DAW Production</li><li>Songwriting</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="projects-section">
+  <div class="container">
+    <h2 class="section-label">// projects</h2>
+    <div class="projects-grid">
+      {% for project in site.projects %}
+      <a href="{{ project.url }}" class="project-card">
+        <div class="project-card-header">
+          <span class="project-stack">{{ project.stack }}</span>
+          <span class="project-arrow">&rarr;</span>
+        </div>
+        <h3>{{ project.title }}</h3>
+        <p>{{ project.description }}</p>
+        <div class="project-tags">
+          <span class="tag">{{ project.role }}</span>
+        </div>
+      </a>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- MUSIC -->
+<section id="music" class="music-section">
+  <div class="container">
+    <h2 class="section-label">// music</h2>
+    <p class="music-blurb">
+      Music production is my other craft. I produce, write, and record — it's where my
+      technical ear and creative instincts meet. Currently working on [project/EP/etc].
+    </p>
+    <div class="music-links">
+      <a href="#" class="btn btn-outline" target="_blank">SoundCloud</a>
+      <a href="#" class="btn btn-outline" target="_blank">Spotify</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <div class="container">
+    <h2 class="section-label">// contact</h2>
+    <p>Open to software engineering and QA/SDET roles. Let's talk.</p>
+    <a href="mailto:{{ site.email }}" class="contact-email">{{ site.email }}</a>
+    <div class="contact-links">
+      <a href="https://github.com/{{ site.github_username }}" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/{{ site.linkedin_username }}" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+</section>

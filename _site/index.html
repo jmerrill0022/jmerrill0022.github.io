@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home — Jacob's Portfolio</title>
+  <meta name="description" content="Software Engineer · Music Producer · San Diego" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Syne:wght@400;700&family=DM+Mono:wght@300;400&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/assets/css/main.css" />
+</head>
+<body>
+
+  
+  <!-- TAKEOVER INTRO SEQUENCE -->
+  <div id="intro-overlay">
+    <canvas id="static-canvas"></canvas>
+
+    <div id="terminal-screen">
+      <div class="scanlines"></div>
+      <div class="terminal-inner">
+        <div id="boot-log"></div>
+        <div id="name-prompt" style="display:none;">
+          <label id="prompt-label">&gt; ENTER HOST NAME TO CONFIRM OVERRIDE:</label>
+          <input type="text" id="name-input" placeholder="your name..." maxlength="24" autocomplete="off" spellcheck="false" />
+        </div>
+        <div id="jk-log" style="display:none;"></div>
+      </div>
+    </div>
+  </div>
+  
+
+  <!-- MAIN SITE (hidden until intro completes) -->
+  <div id="site-content" style="display:none;">
+    <nav class="site-nav">
+  <a href="/" class="nav-logo">JL<span class="cursor-blink">_</span></a>
+  <ul class="nav-links">
+    <li><a href="/#about">about</a></li>
+    <li><a href="/#projects">projects</a></li>
+    <li><a href="/#music">music</a></li>
+    <li><a href="/#contact">contact</a></li>
+    <a href="/assets/resume.pdf" target="_blank" class="nav-cta">résumé</a>
+  </ul>
+  <button class="nav-toggle" aria-label="Toggle menu">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+    <main>
+      <!-- HERO / LANDING -->
+<section id="hero" class="hero-section">
+  <div class="container">
+    <div class="hero-eyebrow">San Diego, CA &mdash; Software Engineer</div>
+    <h1 class="hero-name">Jacob<br /><span class="hero-lastname">Merrill</span></h1>
+    <p class="hero-tagline">I build things at the intersection of software and music.</p>
+    <div class="hero-cta">
+      <a href="#projects" class="btn">View Projects</a>
+      <a href="#contact" class="btn btn-outline">Get in Touch</a>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" class="about-section">
+  <div class="container">
+    <h2 class="section-label">// about</h2>
+    <div class="about-grid">
+      <div class="about-bio">
+        <p>
+          I'm a CS student at Point Loma Nazarene University graduating in 2026, a Graphic Design minor and 
+          nearly four years of professional black-box QA experience on Microsoft Defender.
+          I build things at the intersection of software and music — from vulnerability detection tools
+          to royalty dashboards for independent artists.
+        </p>
+        <p>
+          When I'm not at a computer, I'm in the studio or at the skate park.
+        </p>
+      </div>
+      <div class="about-skills">
+        <div class="skill-group">
+          <h3>Software</h3>
+          <ul>
+            <li>Python</li><li>C / C++</li><li>TypeScript</li>
+            <li>Next.js</li><li>SQL</li><li>Git</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>QA / Testing</h3>
+          <ul>
+            <li>Black-box testing</li>
+            <li>Test case design</li>
+            <li>Bug reporting</li>
+            <li>Defender-scale systems</li>
+          </ul>
+        </div>
+        <div class="skill-group">
+          <h3>Design & Music</h3>
+          <ul>
+            <li>Graphic Design</li><li>UI/UX</li><li>Figma</li>
+            <li>DAW Production</li><li>Songwriting</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJECTS -->
+<section id="projects" class="projects-section">
+  <div class="container">
+    <h2 class="section-label">// projects</h2>
+    <div class="projects-grid">
+      
+      <a href="/projects/distributor/" class="project-card">
+        <div class="project-card-header">
+          <span class="project-stack">Next.js · Supabase · PostgreSQL · Tailwind CSS</span>
+          <span class="project-arrow">&rarr;</span>
+        </div>
+        <h3>Music Distributor SaaS</h3>
+        <p>A full-stack music distribution platform that gets artists on Spotify, Apple Music, TikTok, and 150+ platforms worldwide — built by a musician, for musicians.</p>
+        <div class="project-tags">
+          <span class="tag">Solo Developer</span>
+        </div>
+      </a>
+      
+      <a href="/projects/portfolio/" class="project-card">
+        <div class="project-card-header">
+          <span class="project-stack">Jekyll · JavaScript</span>
+          <span class="project-arrow">&rarr;</span>
+        </div>
+        <h3>Portfolio Website</h3>
+        <p>An interactive, game-inspired portfolio site with a fake system takeover intro sequence, VHS static effect, and scroll-driven landing page.</p>
+        <div class="project-tags">
+          <span class="tag">Solo Developer</span>
+        </div>
+      </a>
+      
+      <a href="/projects/vulnerability-detection/" class="project-card">
+        <div class="project-card-header">
+          <span class="project-stack">Python · ML</span>
+          <span class="project-arrow">&rarr;</span>
+        </div>
+        <h3>ML-Based Vulnerability Detection</h3>
+        <p>A machine learning pipeline that detects code vulnerabilities using real-world training data from the OSSF Secure Coding Guide dataset.</p>
+        <div class="project-tags">
+          <span class="tag">Co-developer</span>
+        </div>
+      </a>
+      
+    </div>
+  </div>
+</section>
+
+<!-- MUSIC -->
+<section id="music" class="music-section">
+  <div class="container">
+    <h2 class="section-label">// music</h2>
+    <p class="music-blurb">
+      Music production is my other craft. I produce, write, and record — it's where my
+      technical ear and creative instincts meet. Currently working on [project/EP/etc].
+    </p>
+    <div class="music-links">
+      <a href="#" class="btn btn-outline" target="_blank">SoundCloud</a>
+      <a href="#" class="btn btn-outline" target="_blank">Spotify</a>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="contact-section">
+  <div class="container">
+    <h2 class="section-label">// contact</h2>
+    <p>Open to software engineering and QA/SDET roles. Let's talk.</p>
+    <a href="mailto:jacobdean805@gmail.com" class="contact-email">jacobdean805@gmail.com</a>
+    <div class="contact-links">
+      <a href="https://github.com/jmerrill0022" target="_blank">GitHub</a>
+      <a href="https://linkedin.com/in/jacob-merrill-7348a9294" target="_blank">LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+    </main>
+    <footer class="site-footer">
+  <div class="container">
+    <div class="footer-left">
+      <span>Jacob Merrill &copy; 2026</span>
+    </div>
+    <div class="footer-links">
+    </div>
+  </div>
+</footer>
+
+  </div>
+
+  <script src="/assets/js/intro.js"></script>
+  <script src="/assets/js/main.js"></script>
+</body>
+</html>
